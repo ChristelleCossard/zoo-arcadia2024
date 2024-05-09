@@ -3,7 +3,7 @@
 ## Le lien de la version en ligne de l’application web :
 
 https://cocoweb10.fr/zoo/
-![Le logo]https://github.com/ChristelleCossard/zoo-arcadia2024/blob/main/assets/images/logo-zoo.PNG 
+![Le logo](https://github.com/ChristelleCossard/zoo-arcadia2024/blob/main/assets/images/logo-zoo.PNG) 
 
 ## Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
 https://trello.com/b/e3DA7Ksq
