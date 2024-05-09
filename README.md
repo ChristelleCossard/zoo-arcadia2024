@@ -1,8 +1,8 @@
-<h1>"Garage Parrot": Projet de création d'un site d'un garage virtuel - Projet pour ECF Studi Hivers 2023.</h1>
+<h1>"Zoo Arcadia": Projet de création d'un site d'un zoo virtuel - Projet pour ECF Studi Hivers 2024.</h1>
 
 ## Le lien de la version en ligne de l’application web :
 
-https://cocodev.alwaysdata.net/garage-parrot/
+https://cocoweb10.fr/zoo/
 ![Le logo](https://github.com/ChristelleCossard/garage-parrot/blob/main/assets/images/logo1.PNG) 
 
 ## Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
