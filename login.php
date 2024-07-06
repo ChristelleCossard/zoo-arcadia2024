@@ -1,36 +1,67 @@
 <?php
-require_once __DIR__ . "/lib/config.php";
-require_once __DIR__ . "/lib/pdo.php";
-require_once __DIR__ . "/lib/user.php";
-require_once __DIR__ . "/lib/menu.php";
-require_once __DIR__ . "/templates/header.php";
+require_once('templates/header.php');
+require_once('lib/user.php');
+
+require_once('lib/config.php');
+require_once('lib/pdo.php');
+require_once('lib/menu.php');
 
 $errors = [];
+$messages = [];
 
-if (isset($_POST["loginUser"])) {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+$users = 
+[
+ [ 'email' => 'abc@test.com', 'password' => '1234'],
+ [ 'email' => 'test@test.com', 'password' => 'test']
+];
+/*
+if (isset($_POST['loginUser'])) {
+  //var_dump($_POST);
+  $query = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+  $query->bindParam(':email', $_POST['email'], $pdo::PARAM_STR);
+  $query->execute();
+  $user = $query->fetch();
 
-    $user = verifyUserLoginPassword($pdo, $email, $password);
-    if ($user) {
-        session_regenerate_id(true);
-        $_SESSION["user"] = $user;
-        if ($user["role"] === "user") {
-            header("location: index.php");
-        } elseif ($user["role"] === "admin") {
-            header("location: admin/index.php");
-        }
 
-    } else {
-        $errors[] = "Email ou mot de passe incorrect";
-    }
+  //foreach ($users as $user) {
+      //if ($user['email'] === $_POST['email'] && $user['password'] === $_POST['password']) {
+          if ($user && $user['password']=== $_POST['password']) {
+          $messages[] = 'connexion ok';
+      }else{
+          $errors[] = 'email ou mot de passe incorrect!';
+      }
+  }
+//}
+*/
+if (isset($_POST['loginUser'])) {
+
+  $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
+
+
+if ($user) {
+  
+  $_SESSION['user'] = ['email' => $user['email'],'role' => $user['role'] ];
+ if ($user['role'] == "admin"){
+  header("location: habitats.php");
+  //header('location: administration.php');
+ }else{
+  header('location: index.php');
+ }
+ 
+} else {
+  $errors[] = 'Email ou mot de passe incorrect';
 }
 
+}
 
 ?>
 
-
-<h1>Login</h1>
+<h1>Connexion</h1>
+<?php foreach ($messages as $message) { ?>
+    <div class="alert alert-success">
+        <?=$message; ?>
+    </div>
+<?php } ?>
 
 <?php foreach ($errors as $error) { ?>
     <div class="alert alert-danger">
@@ -38,18 +69,24 @@ if (isset($_POST["loginUser"])) {
     </div>
 <?php } ?>
 
-<form method="post">
+<body class="text-center">
+    <form class="form-signin" method="POST" enctype="multipart/form-data">
+
     <div class="mb-3">
-        <label class="form-label" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" required>
+      <label for="email" class="sr-only">Email</label>
+      <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" class="form-control" required>
+      <div class="mb-3">
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
     </div>
+      
+     
+      <input type="submit" value="Connexion" name="loginUser" class="btn btn-primary">
+    </form>
+  
 
-    <input type="submit" value="Connexion" name="loginUser" class="btn btn-primary">
-
-</form>
-
-<?php require_once __DIR__ . "/templates/footer.php"; ?>
+</body>
+<?php
+require_once('templates/footer.php');
+?>

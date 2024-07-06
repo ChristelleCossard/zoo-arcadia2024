@@ -1,6 +1,6 @@
 <?php 
 require_once __DIR__ . "/lib/config.php";
-require_once __DIR__ . "/lib/menu.php"; 
+//require_once __DIR__ . "/lib/menu.php"; 
 require_once __DIR__ . "/templates/header.php"; 
 ?>
      
@@ -10,7 +10,7 @@ require_once __DIR__ . "/templates/header.php";
         <div class="container-fluid">
             <div class="row row-legal">
                 <div class="col d-flex flex-row align-items-center justify-content-center">
-                    <h3 id="titleLegal">Mentions légales</h3>
+                <h1 align="center">Mentions légales</h1>
                 </div>
                 <div class="row">
                     <div class="col d-flex flex-row align-items-center justify-content-center">
