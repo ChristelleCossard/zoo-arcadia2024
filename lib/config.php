@@ -19,16 +19,16 @@
     //"legal.php" => ["menu_title" => "Mentions legales", "head_title" => "Mentions legales", "meta_description" => "Mensions legales", "exclude" => true],
 
 ];
-  
+  /*
   $mainMenu2 = [
     'ajout_modification_plat.php' => 'Ajout/modif plat'
   ];
-
+*/
 
 define("_DOMAIN_", ".techtrendzstudi.local");
 
 define("_DB_SERVER_", "mysql-cocodev.alwaysdata.net");
-define("_DB_NAME_", "cocodev_garage");
+define("_DB_NAME_", "cocodev_zoo");
 define("_DB_USER_", "cocodev");
 define("_DB_PASSWORD_", "Vicky.10");
 
