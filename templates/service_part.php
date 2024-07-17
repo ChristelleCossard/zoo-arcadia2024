@@ -1,5 +1,5 @@
 <?php
-    $imagePath = getServiceImage($service["image"]);
+    $imagePath = getServiceImage($service["photoservice"]);
 ?>
 
 <div class="col-md-4 my-2">

@@ -2,7 +2,7 @@
 
 ## Le lien de la version en ligne de l’application web :
 
-https://cocoweb10.fr/zoo/
+https://cocodev.alwaysdata.net/zoo-arcadia/
 ![Le logo](https://github.com/ChristelleCossard/zoo-arcadia2024/blob/main/assets/images/logo-zoo.PNG) 
 
 ## Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
@@ -13,9 +13,9 @@ https://trello.com/b/e3DA7Ksq
 
 ## Documents complémentaires joints au projet
 
-+ [1-garage.sql](https://github.com/ChristelleCossard/garage-parrot/blob/main/garage.sql)
++ [1-zoobdd.sql](https:)
 
-+ [2-Copie à rendre.pdf](https://github.com/ChristelleCossard/garage-parrot/blob/main/00-Documents-complementaires/ECF_GraduateDeveloppeur_HIVERS2023_copiearendre_COSSARD_Christelle.pdf)
++ [2-Copie à rendre.pdf](https://)
 
 
 
