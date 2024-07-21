@@ -29,7 +29,7 @@ Clonez ce repository et placer le projet à la racine du serveur; importez le fi
 login: admin@test.com
 mdp:test
 
---> pour un client:
+--> pour un visiteur:
 login: user@test.com
 mdp: test
 
