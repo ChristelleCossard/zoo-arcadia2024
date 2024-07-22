@@ -42,7 +42,7 @@ if ($user) {
   
   $_SESSION['user'] = ['email' => $user['email'],'role' => $user['role'] ];
  if ($user['role'] == "admin"){
-  header("location: habitats.php");
+  header("location: admin/index.php");
   //header('location: administration.php');
  }else{
   header('location: index.php');
