@@ -1,8 +1,10 @@
 <?php
 $adminMenu = [
-    'index.php' => 'Accueil',
-    'articles.php' => 'Articles',
-    'cars.php' => 'Véhicules',
+    './index.php' => 'Accueil',
+    'services.php' => 'Services',
+    'habitats.php' => 'Habitats',
+    'animals.php' => 'Animaux',
+    'horaires.php' => 'Horaires',
 ];
 ?>
 
