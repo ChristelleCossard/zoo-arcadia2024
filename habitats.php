@@ -5,6 +5,6 @@ require_once __DIR__ . "/templates/header.php";
 
 
 <h1 align="center">Bienvenue sur la page des habitats!</h1>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium nemo expedita cum officia, ex corrupti delectus praesentium ducimus quas eligendi libero, saepe neque corporis quos autem ipsum dolor facilis excepturi.</p>
+<p></p>
 
 <?php require_once __DIR__ . "/templates/footer.php"; ?>
